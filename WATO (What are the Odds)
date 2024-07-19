@@ -28,7 +28,4 @@ while True:
     print(f"{guess} is too high")
   break
 
-  if not flag:
-    print("\fThe number is %d" % number)
-    print("\tYou Lose")
-# If user goes over the guess limit
+
