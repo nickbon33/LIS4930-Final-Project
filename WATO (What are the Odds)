@@ -27,6 +27,6 @@ while True:
   break
 
   if not flag:
-    print("\fThe number is %d" % x)
+    print("\fThe number is %d" % number)
     print("\tYou Lose")
 # If user goes over the guess limit
