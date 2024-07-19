@@ -13,18 +13,19 @@ number = random.randint(low, high)
 while True:
   guess = int(input(f"Enter a number between({low}-{high}):"))
   # I would recommend putting low and high inside rather then the numbers to keep it consistent if the users want to adjust the numbers above
-  while guesses < total_guesses:
+  while total_guesses < total_guesses:
     total_guesses += 1
-  total_guesses = math.ceil(math.log(high - low + 3))
-  print("\f\tONLY ", total_guesses, " guesses to guess the interger\n")
+  total_guesses = math.ceil(math.log(high - low + 1))
+# This can be adjusted to change the amount of total guesses the users gets
+  print("\f\tONLY ", total_guesses, " guesses to guess the interger\f")
 
 #Determines if you guess is right or wrong.
-  if guess < number:
+   if number == guess:
+    print(f"{guess} is right")
+  elif guess < number:
     print(f"{guess} is too low")
   elif guess > number:
     print(f"{guess} is too high")
-  else:
-  print(f"{guess} is right")
   break
 
   if not flag:
