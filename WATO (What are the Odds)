@@ -2,19 +2,20 @@ import random
 import math
 #import classes which are used below for functions
 
+#Creates the numbers used below
 low = 1
 high = 10
 # Can be higher depending on needs... Could be 100, or 1000. 
 guesses = 0
 number = random.randint(low, high)
 
-#The number generator
+#The number generator and guess limiter
 while True:
   guess = int(input(f"Enter a number between({low}-{high}):"))
   # I would recommend putting low and high inside rather then the numbers to keep it consistent if the users want to adjust the numbers above
   while guesses < total_guesses:
     guesses += 1
-  total_guesses = math.ceil(math.log(high - low + 1))
+  total_guesses = math.ceil(math.log(high - low + 3))
   print("\f\tONLY ", total_guesses, " chances to guess the interger\n")
 
 #Determines if you guess is right or wrong.
